@@ -32,7 +32,7 @@ if (isset($_POST['username'])) {
         </form>
 
         <p><a href="sessionUsername.php">Перейти на сторінку з ім'ям, отриманим з $_SESSION</a></p>
-        <p><a href="index.php">Перейти на сторінку з ім'ям, отриманим з $_COOKIE</a></p>
+        <p><a href="coockieUsername.php">Перейти на сторінку з ім'ям, отриманим з $_COOKIE</a></p>
     </main>
 </body>
 </html>
