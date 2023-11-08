@@ -31,7 +31,7 @@ if (isset($_POST['username'])) {
             <input type="reset" value="Reset" class="btn"></input>
         </form>
 
-        <p><a href="index.php">Перейти на сторінку з ім'ям, отриманим з $_SESSION</a></p>
+        <p><a href="sessionUsername.php">Перейти на сторінку з ім'ям, отриманим з $_SESSION</a></p>
         <p><a href="index.php">Перейти на сторінку з ім'ям, отриманим з $_COOKIE</a></p>
     </main>
 </body>
