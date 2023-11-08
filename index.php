@@ -1,17 +1,15 @@
 <?php
+    if (session_status() === PHP_SESSION_NONE) {
+        session_start();
+    }
 
-if (session_status() === PHP_SESSION_NONE) {
-    session_start();
-}
+    if (isset($_POST['username']) && !empty($_POST['username'])) {
+        $username = $_POST['username'];
 
-if (isset($_POST['username']) && !empty($_POST['username'])) {
-    $username = $_POST['username'];
+        $_SESSION['username'] = $username;
 
-    $_SESSION['username'] = $username;
-
-    setcookie('username', $username, time() + 3600);
-}
-
+        setcookie('username', $username, time() + 3600);
+    }
 ?>
 
 <!DOCTYPE html>

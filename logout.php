@@ -1,29 +1,27 @@
 <?php
-
-if (session_status() === PHP_SESSION_NONE) {
-    session_start();
-}
-
-
-function clearSessionUsername() {
-    if (isset($_SESSION['username'])) {
-        unset($_SESSION['username']);
+    if (session_status() === PHP_SESSION_NONE) {
+        session_start();
     }
-}
 
-function clearCookieUsername() {
-    if (isset($_COOKIE['username'])) {
-        setcookie('username', '', time() - 3600);
+    function clearSessionUsername() {
+        if (isset($_SESSION['username'])) {
+            unset($_SESSION['username']);
+        }
     }
-}
 
-if (isset($_POST['clearSession'])) {
-    clearSessionUsername();
-}
+    function clearCookieUsername() {
+        if (isset($_COOKIE['username'])) {
+            setcookie('username', '', time() - 3600);
+        }
+    }
 
-if (isset($_POST['clearCookie'])) {
-    clearCookieUsername();
-}
+    if (isset($_POST['clearSession'])) {
+        clearSessionUsername();
+    }
+
+    if (isset($_POST['clearCookie'])) {
+        clearCookieUsername();
+    }
 ?>
 
 <!DOCTYPE html>
