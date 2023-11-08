@@ -1,6 +1,8 @@
 <?php
 
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 
 if (isset($_POST['username'])) {
     $username = $_POST['username'];
@@ -33,6 +35,7 @@ if (isset($_POST['username'])) {
 
         <p><a href="sessionUsername.php">Перейти на сторінку з ім'ям, отриманим з $_SESSION</a></p>
         <p><a href="coockieUsername.php">Перейти на сторінку з ім'ям, отриманим з $_COOKIE</a></p>
+        <p><a href="logout.php">Перейти на сторінку з видаленням ім'я з сесії чи кукі</a></p>
     </main>
 </body>
 </html>
