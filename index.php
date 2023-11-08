@@ -17,14 +17,18 @@ if (isset($_POST['username'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
     <title>Лабораторна 4</title>
 </head>
 <body >
     <main>
+        <h1>Форма для введення імені користувача</h1>
+        <h2>Відправте ім'я користувача в форму, та переходьте за посиланнями</h2>
         <form method="post" action="index.php">
             <label for="username">Введіть ваше ім'я: </label>
             <input type="text" name="username" id="username">
-            <input type="submit" value="Відправити">
+            <input type="submit" value="Відправити" class="btn">
+            <input type="reset" value="Reset" class="btn"></input>
         </form>
 
         <p><a href="index.php">Перейти на сторінку з ім'ям, отриманим з $_SESSION</a></p>
