@@ -4,7 +4,7 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
-if (isset($_POST['username'])) {
+if (isset($_POST['username']) && !empty($_POST['username'])) {
     $username = $_POST['username'];
 
     $_SESSION['username'] = $username;
